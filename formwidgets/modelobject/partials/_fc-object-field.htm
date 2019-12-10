@@ -1,0 +1,11 @@
+<select name="<?= $name ?>" id="<?= $id ?>"
+    class="form-control custom-select">
+    <?php if ($emptyOption): ?>
+        <option value=""><?= $emptyOption ?></option>
+    <?php endif ?>
+    <?php foreach ($options as $optionValue => $optionLabel): ?>
+        <option value="<?= $optionValue ?>"
+            <?= $optionValue == $value ? 'selected' : '' ?>
+            ><?= $optionLabel ?></option>
+    <?php endforeach ?>
+</select>

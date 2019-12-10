@@ -1,0 +1,20 @@
+/**
+ * This makes sure the group title in a repeater field is always visible.
+ *
+ * Note the duplicate classname at the end: this makes sure our rules take precedence over the core
+ * formwidgets styles.
+ */
+
+/* Header when group is expanded */
+.field-repeater li.field-repeater-item .repeater-item-collapsed-title.repeater-item-collapsed-title {
+    position: relative;
+    display: block;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+/* Header when group is collapsed */
+.field-repeater li.field-repeater-item.collapsed .repeater-item-collapsed-title {
+    /* Reset position: absolute */
+    position: absolute;
+}
