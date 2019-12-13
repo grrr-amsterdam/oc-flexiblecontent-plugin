@@ -2,6 +2,7 @@
 namespace GrrrAmsterdam\FlexibleContent\Classes;
 
 use File;
+use Event;
 use Cms\Classes\Theme;
 use Garp\Functional as f;
 use GrrrAmsterdam\FlexibleContent\Classes\ComponentGroup;
@@ -17,10 +18,14 @@ class GroupManager {
 
     public function getGroupsConfig()
     {
-        return array_merge(
+        $groupsConfig = array_merge(
             $this->_config->partials(),
             $this->_getComponentGroupConfig()
         );
+
+        $alteredGroupsConfig = Event::fire('flexibleContent.alterGroupsConfig', [$groupsConfig], true);
+
+        return $alteredGroupsConfig ?: $groupsConfig;
     }
 
     protected function _getComponentGroupConfig()

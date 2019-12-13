@@ -2,6 +2,7 @@
 namespace GrrrAmsterdam\FlexibleContent\Components;
 
 use Cms\Classes\ComponentBase;
+use Grrr\FlexibleContent\Classes\FlexibleContent as FlexibleContentClass;
 
 class FlexibleContent extends ComponentBase {
 
@@ -22,7 +23,7 @@ class FlexibleContent extends ComponentBase {
     }
 
     public function onRender() {
-        $flexibleContent = new \Grrr\FlexibleContent\Classes\FlexibleContent(
+        $flexibleContent = new FlexibleContentClass(
             $this->property('flexibleContent') ?: []
         );
         $flexibleContent->addComponents($this->controller);
