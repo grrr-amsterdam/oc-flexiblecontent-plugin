@@ -2,7 +2,7 @@
 namespace GrrrAmsterdam\FlexibleContent\Components;
 
 use Cms\Classes\ComponentBase;
-use Grrr\FlexibleContent\Classes\FlexibleContent as FlexibleContentClass;
+use GrrrAmsterdam\FlexibleContent\Classes\FlexibleContent as FlexibleContentClass;
 
 class FlexibleContent extends ComponentBase {
 
