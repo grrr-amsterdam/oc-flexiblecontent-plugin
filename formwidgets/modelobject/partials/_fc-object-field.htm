@@ -1,5 +1,7 @@
 <select name="<?= $name ?>" id="<?= $id ?>"
-    class="form-control custom-select">
+    data-search-endpoint="<?= $searchEndpoint ?>"
+    data-name-from="<?= $nameFrom ?>"
+    class="form-control model-object-field">
     <?php if ($emptyOption): ?>
         <option value=""><?= $emptyOption ?></option>
     <?php endif ?>
