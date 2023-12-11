@@ -1,28 +1,33 @@
 {
-    "name": "grrr-amsterdam/oc-flexiblecontent-plugin",
-    "description": "OctoberCMS Plugin for adding flexible content to models.",
-    "type": "october-plugin",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Harmen Janssen",
-            "email": "harmen@grrr.nl"
-        },
-        {
-            "name": "Ramiro Hammen",
-            "email": "ramiro@grrr.nl"
-        }
-    ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require": {
-        "php": ">=7.0",
-        "composer/installers": "~1.0",
-        "grrr-amsterdam/garp-functional": "^4.0"
+  "name": "grrr-amsterdam/oc-flexiblecontent-plugin",
+  "description": "OctoberCMS Plugin for adding flexible content to models.",
+  "type": "october-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Harmen Janssen",
+      "email": "harmen@grrr.nl"
     },
-    "autoload": {
-        "psr-4": {
-            "GrrrAmsterdam\\FlexibleContent\\": ""
-        }
+    {
+      "name": "Ramiro Hammen",
+      "email": "ramiro@grrr.nl"
     }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=7.2",
+    "composer/installers": "~1.0",
+    "grrr-amsterdam/garp-functional": "^4.0|^5.0|^6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "GrrrAmsterdam\\FlexibleContent\\": ""
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  }
 }
