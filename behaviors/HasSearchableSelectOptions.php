@@ -13,7 +13,7 @@ class HasSearchableSelectOptions extends ExtensionBase {
         $this->parent = $parent;
     }
 
-    public function searchSelectOptions() {
+    public function search_select_options() {
         $searchQuery = request()->get('term');
         $optionLabelFrom = request()->get('name_from', 'title');
 
