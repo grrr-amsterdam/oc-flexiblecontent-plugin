@@ -100,6 +100,9 @@ class Plugin extends PluginBase
     protected function extendForms() {
 
         Event::listen('backend.form.extendFields', function($widget)  {
+            if ($widget->isNested) {
+                return;
+            }
             if (!$this->modelShouldBeExtended($widget->model)) {
                 return;
             }
